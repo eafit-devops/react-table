@@ -21,6 +21,8 @@ const rows = [
   createData('Brazo de Reina', 400, 16.0, 49, 3.9),
   createData('Brownie', 123, 16.0, 49, 3.9),
   createData('IslasFlotantes', 150, 15.0, 50, 3.9),
+  createData('Chocolate', 200, 15.0, 50, 3.9),
+
 ];
 
 export default function BasicTable() {
