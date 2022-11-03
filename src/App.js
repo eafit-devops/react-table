@@ -12,6 +12,7 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
+  createData('Chocolatina Hersheys', 180, 17.0, 40, 2.5),
   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
   createData('Eclair', 262, 16.0, 24, 6.0),
