@@ -21,12 +21,13 @@ const rows = [
   createData('Torta', 200, 16.0, 49, 3.9),
   createData('Brazo de Reina', 400, 16.0, 49, 3.9),
   createData('Brownie', 123, 16.0, 49, 3.9),
-  createData('Tiramisu' 518, 18.0, 50, 4.5)
+  createData('Tiramisu', 518, 18.0, 50, 4.5),
   createData('Merengon', 1000, 20.0, 100, 0.1),
   createData('Basbousa', 123, 16.0, 49, 3.9),
   createData('IslasFlotantes', 150, 15.0, 50, 3.9),
   createData('Manjar Blanco', 160, 16.0, 70, 5.6),
   createData('Cakepop', 10, 16.0, 10, 5.6),
+  createData('Salami', 10, 16.0, 10, 5.6),
 ];
 
 export default function BasicTable() {
