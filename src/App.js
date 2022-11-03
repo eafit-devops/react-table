@@ -27,6 +27,7 @@ const rows = [
   createData('IslasFlotantes', 150, 15.0, 50, 3.9),
   createData('Manjar Blanco', 160, 16.0, 70, 5.6),
   createData('Cakepop', 10, 16.0, 10, 5.6),
+  createData('Arroz Con Leche', 457, 4.5, 17, 4.4),
 ];
 
 export default function BasicTable() {
