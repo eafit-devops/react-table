@@ -24,6 +24,7 @@ const rows = [
   createData('Basbousa', 123, 16.0, 49, 3.9)
   createData('IslasFlotantes', 150, 15.0, 50, 3.9),
   createData('Manjar Blanco', 160, 16.0, 70, 5.6),
+  createData('Cakepop', 10, 5.0, 10, 5),
 ];
 
 export default function BasicTable() {
