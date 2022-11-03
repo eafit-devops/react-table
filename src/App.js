@@ -20,7 +20,7 @@ const rows = [
   createData('Torta', 200, 16.0, 49, 3.9),
   createData('Brazo de Reina', 400, 16.0, 49, 3.9),
   createData('Brownie', 123, 16.0, 49, 3.9),
-  createData('Salami', 150, 20.0, 55, 2.5),
+  createData('Salami V2.0', 150, 20.0, 55, 2.5),
 ];
 
 export default function BasicTable() {
