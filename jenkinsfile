@@ -1,16 +1,48 @@
 pipeline {
     agent any
-
+    tools {
+        nodejs '19.0.1'
+    }
     stages {
-        stage('Hello') {
+        stage('Prepare') {
             steps {
-                echo 'Hello World'
+                echo 'Descarga del código desde repositorio en GitHub'
+                git 'https://github.com/eafit-devops/react-table.git'
             }
         }
-        stage('Good bye') {
-					steps {
-						echo 'Good by'
-					}
-				}
+        stage('Install') {
+            steps {
+                echo 'Instalaci´ón de dependencias'
+                sh 'npm install'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'npm run test'
+            }
+        }
+    }
+    post {
+        always {
+            echo 'Ejecución finalizada...'
+            deleteDir() /* clean up our workspace */
+        }
+        success {
+            echo 'Finalización sin errores'
+            mail to: 'nassao@gmail.com',
+                subject: "Nueva versión ejecutada",
+                body: "Una nueva ejecuci´ón exitosa se ha generado en Jenkins"
+        }
+        failure {
+            echo 'Fallo en el proceso'
+            mail to: 'nassao@gmail.com',
+                subject: "Error en ejecución",
+                body: "Jenkins encontró un error en la ejecución"
+        }
     }
 }
