@@ -36,7 +36,7 @@ pipeline {
             echo 'Finalización sin errores'
             mail to: 'nassao@gmail.com',
                 subject: "Nueva versión ejecutada",
-                body: "Una nueva ejecuci´ón exitosa se ha generado en Jenkins"
+                body: "Una nueva ejecución exitosa se ha generado en Jenkins"
         }
         failure {
             echo 'Fallo en el proceso'
