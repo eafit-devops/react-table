@@ -6,10 +6,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Titulo from './Titulo';
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
+
+export const getRandom = () => Math.random() * 100;
 
 const rows = [
   createData('Chocolatina Hersheys', 180, 17.0, 40, 2.5),
@@ -28,14 +31,13 @@ const rows = [
   createData('Manjar Blanco', 160, 16.0, 70, 5.6),
   createData('Cakepop', 10, 16.0, 10, 5.6),
   createData('Salami', 10, 16.0, 10, 5.6),
+  createData('Arequipe', 120, 15.7, 23, 8,2),
 ];
 
 export default function BasicTable() {
   return (
     <>
-      <h1 id="titulo-tabla" data-testid="h1-titulo-tabla">
-        Tabla de Postres
-      </h1>
+      <Titulo/>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
