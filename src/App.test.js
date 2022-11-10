@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import App, { getRandom } from './App';
+import App, { getRandom, getSuma } from './App';
 
 test('Se renderiza la App', () => {
   render(<App />);
@@ -41,4 +41,21 @@ test('Randomizador retorna un aleatorio',() => {
   const random2 = getRandom();
   expect(random1 === random2).toBeFalsy();
 });
+
+test('Suma de dos numeros positivos',() => {
+  const numero1 = 2;
+  const numero2 = 5;
+  const resultado = getSuma(numero1, numero2);
+  const esperado = 7;
+  expect(resultado).toBe(esperado);
+});
+
+test('Suma de dos numeros negativos',() => {
+  const numero1 = -4;
+  const numero2 = -10;
+  const resultado = getSuma(numero1, numero2);
+  const esperado = -14;
+  expect(resultado).toBe(esperado);
+});
+
 

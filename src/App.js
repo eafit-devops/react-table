@@ -13,6 +13,7 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 export const getRandom = () => Math.random() * 100;
+export const getSuma = (a, b) => a+b;
 
 const rows = [
   createData('Chocolatina Hersheys', 180, 17.0, 40, 2.5),
