@@ -42,20 +42,26 @@ test('Randomizador retorna un aleatorio',() => {
   expect(random1 === random2).toBeFalsy();
 });
 
-test('Suma de dos numeros positivos',() => {
-  const numero1 = 2;
-  const numero2 = 5;
-  const resultado = getSuma(numero1, numero2);
-  const esperado = 7;
-  expect(resultado).toBe(esperado);
+test('Se suman 2 numeros positivos',() => {
+  const numero1 = 1;
+  const numero2 = 1;
+  expect((numero1+numero2) === getSuma(numero1,numero2)).toBeTruthy();
 });
 
-test('Suma de dos numeros negativos',() => {
-  const numero1 = -4;
-  const numero2 = -10;
-  const resultado = getSuma(numero1, numero2);
-  const esperado = -14;
-  expect(resultado).toBe(esperado);
+test('Se suman 2 numeros negativos',() => {
+  const numero1 = -1;
+  const numero2 = -1;
+  expect((numero1+numero2) === getSuma(numero1,numero2)).toBeTruthy();
 });
 
+test('Se suman un numero negativo y un numero positivo',() => {
+  const numero1 = 1;
+  const numero2 = -1;
+  expect((numero1+numero2) === getSuma(numero1,numero2)).toBeTruthy();
+});
 
+test('Se suman 2 numeros ceros',() => {
+  const numero1 = 0;
+  const numero2 = 0;
+  expect((numero1+numero2) === getSuma(numero1,numero2)).toBeTruthy();
+});
