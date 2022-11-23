@@ -15,8 +15,6 @@ function createData(name, calories, fat, carbs, protein) {
 export const getRandom = () => Math.random() * 100;
 export const getSuma = (a, b) => a+b;
 
-export const getSuma = (a,b) => a+b;
-
 const rows = [
   createData('Chocolatina Hersheys', 180, 17.0, 40, 2.5),
   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
@@ -34,7 +32,7 @@ const rows = [
   createData('Manjar Blanco', 160, 16.0, 70, 5.6),
   createData('Cakepop', 10, 16.0, 10, 5.6),
   createData('Salami', 10, 16.0, 10, 5.6),
-  createData('Arequipe', 120, 15.7, 23, 8,2),
+  createData('Arequipe', 120, 15.7, 23, 8.2),
 ];
 
 export default function BasicTable() {
