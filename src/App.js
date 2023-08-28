@@ -8,31 +8,56 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Titulo from './Titulo';
 
-function createData(name, calories, fat, carbs, protein) {
+// Seccion de postres
+
+/**
+ * Crea un nuevo postre
+ * @param {*} name 
+ * @param {*} calories 
+ * @param {*} fat 
+ * @param {*} carbs 
+ * @param {*} protein 
+ * @returns 
+ */
+function crdt(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
+
+// Seccion de numeros
 export const getRandom = () => Math.random() * 100;
 export const getSuma = (a, b) => a+b;
+export const modulo = (num, base) => num % base;
 
-const rows = [
-  createData('Chocolatina Hersheys', 180, 17.0, 40, 2.5),
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-  createData('Torta', 200, 16.0, 49, 3.9),
-  createData('Brazo de Reina', 400, 16.0, 49, 3.9),
-  createData('Brownie', 123, 16.0, 49, 3.9),
-  createData('Merengon', 400, 20.0, 100, 0.1),
-  createData('Tiramisu', 518, 18.0, 50, 4.5),
-  createData('Basbousa', 123, 16.0, 49, 3.9),
-  createData('IslasFlotantes', 150, 15.0, 50, 3.9),
-  createData('Manjar Blanco', 160, 16.0, 70, 5.6),
-  createData('Cakepop', 10, 16.0, 10, 5.6),
-  createData('Salami', 10, 16.0, 10, 5.6),
-  createData('Arequipe', 120, 15.7, 23, 8.2),
+/**
+ * 
+ * @returns {integer} 
+ */
+export const rdm1a20 = () => Math.ceil(Math.random() * 20);
+
+// Seccion de postres
+
+/**
+ * Lista de postres
+ */
+const r = [
+  crdt('Chocolatina Hersheys', 180, 17.0, 40, 2.5),
+  crdt('Frozen yoghurt', 159, 6.0, 24, 4.0),
+  crdt('Ice cream sandwich', 237, 9.0, 37, 4.3),
+  crdt('Eclair', 262, 16.0, 24, 6.0),
+  crdt('Cupcake', 305, 3.7, 67, 4.3),
+  crdt('Gingerbread', 356, 16.0, 49, 3.9),
+  crdt('Torta', 200, 16.0, 49, 3.9),
+  crdt('Brazo de Reina', 400, 16.0, 49, 3.9),
+  crdt('Brownie', 123, 16.0, 49, 3.9),
+  crdt('Merengon', 400, 20.0, 100, 0.1),
+  crdt('Tiramisu', 518, 18.0, 50, 4.5),
+  crdt('Basbousa', 123, 16.0, 49, 3.9),
+  crdt('IslasFlotantes', 150, 15.0, 50, 3.9),
+  crdt('Manjar Blanco', 160, 16.0, 70, 5.6),
+  crdt('Cakepop', 10, 16.0, 10, 5.6),
+  crdt('Salami', 10, 16.0, 10, 5.6),
+  crdt('Arequipe', 120, 15.7, 23, 8.2),
 ];
 
 export default function BasicTable() {
@@ -51,7 +76,7 @@ export default function BasicTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {r.map((row) => (
               <TableRow
                 key={row.name}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
